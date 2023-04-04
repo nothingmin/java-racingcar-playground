@@ -11,7 +11,7 @@
 5. else를 사용하지 마라.
 
 ## 기능 요구사항 분리 및 힌트
-1.    빈 문자열 또는 null 값을 입력할 경우 0을 반환해야 한다.(예 : “” => 0, null => 0)
+1. 빈 문자열 또는 null 값을 입력할 경우 0을 반환해야 한다.(예 : “” => 0, null => 0)
 2. if (text == null) {}
 3. if (text.isEmpty()) {}
 4. 숫자 하나를 문자열로 입력할 경우 해당 숫자를 반환한다.(예 : “1”)
@@ -22,12 +22,14 @@
 9. 구분자를 컴마(,) 이외에 콜론(:)을 사용할 수 있다. (예 : “1,2:3” => 6)
 10. String[] tokens= text.split(",|:");
 11. “//”와 “\n” 문자 사이에 커스텀 구분자를 지정할 수 있다. (예 : “//;\n1;2;3” => 6)
-12. // java.util.regex 패키지의 Matcher, Pattern import
-13. Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
-14. if (m.find()) {
-15. String customDelimiter = m.group(1);
-16. String[] tokens= m.group(2).split(customDelimiter);
-17. // 덧셈 구현
-18. }
+
+```// java.util.regex 패키지의 Matcher, Pattern import 
+    Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
+    if (m.find()) {
+        String customDelimiter = m.group(1);
+        String[] tokens= m.group(2).split(customDelimiter);
+    // 덧셈 구현
+    }``
+`
 19. 음수를 전달할 경우 RuntimeException 예외가 발생해야 한다. (예 : “-1,2,3”)
 20. 구글에서 “junit4 expected exception”으로 검색해 해결책을 찾는다.
