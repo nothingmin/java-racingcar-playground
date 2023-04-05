@@ -17,4 +17,20 @@ public class CarTest {
         Car car = new Car("GWAK");
         assertThat(car.getName()).isEqualTo("GWAK");
     }
+
+    @Test
+    public void can_move_0(){
+        Car car = new Car("GWAK");
+        assertThat(car.canMove(0)).isEqualTo(false);
+    }
+    @Test
+    public void can_move_4(){
+        Car car = new Car("GWAK");
+        assertThat(car.canMove(4)).isEqualTo(true);
+    }
+    @Test
+    public void can_move_9(){
+        Car car = new Car("GWAK");
+        assertThat(car.canMove(9)).isEqualTo(true);
+    }
 }

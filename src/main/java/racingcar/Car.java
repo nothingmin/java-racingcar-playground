@@ -20,4 +20,7 @@ public class Car {
         return name.getName();
     }
 
+    public boolean canMove(int i) {
+        return i >=4;
+    }
 }
