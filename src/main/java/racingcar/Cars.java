@@ -17,4 +17,10 @@ public class Cars {
     public int maxPosition() {
         return cars.stream().map(Car::getPosition).max(Integer::compare).orElse(-1);
     }
+
+    public void race(){
+        for (Car car : cars) {
+            car.race();
+        }
+    }
 }
