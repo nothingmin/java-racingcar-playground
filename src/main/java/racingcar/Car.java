@@ -2,10 +2,10 @@ package racingcar;
 
 public class Car {
     private Integer position = 0;
-    private final String name;
+    private final CarName name;
 
     public Car(String name) {
-        this.name = name;
+        this.name = new CarName(name);
     }
 
     public void move() {
@@ -17,7 +17,7 @@ public class Car {
     }
 
     public String getName() {
-        return name;
+        return name.getName();
     }
 
 }
