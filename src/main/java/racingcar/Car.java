@@ -30,6 +30,5 @@ public class Car {
         if(canMove(random.nextInt(10))){
             move();
         }
-        System.out.println(getName()+ " : " + position.getPosition());
     }
 }
